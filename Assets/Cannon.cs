@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cannon : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    public Animator animator;
     public Transform fireSocket;
     public float rotationRate = 90.0f;
 
@@ -28,6 +29,7 @@ public class Cannon : MonoBehaviour
 
     void Fire()
     {
+        animator.SetTrigger("Fire"); //sets the animation fire trigger to true. The state machine will register that, run the Fire animation, then reset this trigger to false.
         Instantiate(projectilePrefab, fireSocket.position, fireSocket.rotation);
     }
 }
