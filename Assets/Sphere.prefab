@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   forceAmount: 25
+  explosionPrefab: {fileID: 4450174957233215004, guid: 97dd2f2595179af4abcd80fd846e4e0d, type: 3}
