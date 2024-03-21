@@ -10,7 +10,7 @@ public class Explosion : MonoBehaviour
     void Start()
     {
         Invoke("DestroyExplosion", 0.1f);
-        Instantiate(explosionFX, transform.position, Quaternion.identity);
+        Instantiate(explosionFX, transform.position, Quaternion.identity); //destroy later?
     }
 
     private void OnTriggerEnter(Collider other) //Takes in the other collider that is overlapping our trigger collider

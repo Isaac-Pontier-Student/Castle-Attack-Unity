@@ -10,6 +10,8 @@ public class Cannon : MonoBehaviour
     public float rotationRate = 90.0f;
     public ParticleSystem fireFX;
 
+    public int numProjectiles = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,6 @@ public class Cannon : MonoBehaviour
         animator.SetTrigger("Fire"); //sets the animation fire trigger to true. The state machine will register that, run the Fire animation, then reset this trigger to false.
         Instantiate(projectilePrefab, fireSocket.position, fireSocket.rotation);
         fireFX.Play();
+        numProjectiles++;
     }
 }
