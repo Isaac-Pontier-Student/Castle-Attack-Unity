@@ -15,11 +15,9 @@ public class Explosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) //Takes in the other collider that is overlapping our trigger collider
     {
-        print(other.name + "'s collider just entered the trigger collider");
         Rigidbody rigidbody = other.GetComponent<Rigidbody>();
         if (rigidbody)
         {
-            print(rigidbody.name + " is the rigidbody that is about to get exploderated");
             rigidbody.AddExplosionForce(force, transform.position, radius, modifier, ForceMode.VelocityChange);
         }
     }

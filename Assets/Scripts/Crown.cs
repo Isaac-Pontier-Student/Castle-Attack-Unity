@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Crown : MonoBehaviour
 {
-    public GameObject explosion; //this is used for the explosion particle FX that happens when the crown disappears upon game win
+    public GameObject explosion;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -16,16 +16,5 @@ public class Crown : MonoBehaviour
                 score.EndLevel(); //score is an instance of the Score class which is defined in its own file
             }
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
