@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
                 scoreDisplay.text = "Three Stars!";
                 scoreAnimator.SetInteger("Stars", 3);
             }
-            else if (numProjectiles == twoStarsValue) 
+            else if (numProjectiles <= twoStarsValue) 
             { 
                 scoreDisplay.text = "Two Stars.";
                 scoreAnimator.SetInteger("Stars", 2);
